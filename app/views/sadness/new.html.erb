@@ -1,0 +1,7 @@
+<h1>Sadness</h1>
+
+<%= form_tag(controller: 'sadness',action: 'depress', method: 'get') do %>
+    <%= label_tag(:link_to, "Sadness URL:") %>
+    <%= text_field_tag(:link_to) %>
+    <%= submit_tag("Go!") %>
+<% end %>
