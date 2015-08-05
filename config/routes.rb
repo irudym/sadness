@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+
+
+  get 'words/edit_words'
+  post 'words/update_words'
+  resources :words
+
   get 'sadness/new'
-  post 'sadness/depress'
+  get 'sadness/show'
+  get 'sadness/depress'
   post 'sadness/create'
 
   root 'sadness#new'

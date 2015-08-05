@@ -3,3 +3,17 @@
 <p>
   <%= @text.to_s.html_safe %>
 </p>
+<p>
+  <%= @sadness_map.to_s.html_safe %>
+</p>
+<row>
+  <div class="col-sm-12 sadness_scale">
+    <div class="sadness block" style="width: <%=@sadness_map[0]%>%"><%= @sadness_map[0] %>%</div>
+    <div class="sorrow block" style="width: <%=@sadness_map[1]%>%"><%= @sadness_map[1] %>%</div>
+    <div class="ok block" style="width: <%=@sadness_map[2]%>%"><%= @sadness_map[2] %>%</div>
+    <div class="happy block" style="width: <%=@sadness_map[3]%>%"><%= @sadness_map[3] %>%</div>
+  </div>
+</row>
+<p>
+  Sadness: <%= @sadness %>
+</p>

@@ -1,0 +1,23 @@
+<h1>Words#new</h1>
+
+<%= form_tag controller: :words, action: :update_words do %>
+    <% @words.each do |word| %>
+        <div class="row">
+          <div class="col-sm-1">
+        <%= label_tag 'word' + word.id.to_s, word[:word] %>
+          </div>
+          <div class="col-sm-2">
+        <%= radio_button_tag word.id.to_s, '-2' %>
+        <%= radio_button_tag  word.id.to_s, '-1' %>
+        <%= radio_button_tag word.id.to_s, '0' %>
+        <%= radio_button_tag word.id.to_s, '+1' %>
+        <%= radio_button_tag word.id.to_s, '+2' %>
+            </div>
+        </div>
+    <% end %>
+    <row>
+    <%= submit_tag 'Submit', class: 'bnt bnt-default' %>
+    </row>
+<% end %>
+
+

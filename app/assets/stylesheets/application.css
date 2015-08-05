@@ -12,4 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= require_directory ../../../vendor/assets/stylesheets/bootstrap
  */

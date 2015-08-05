@@ -1,7 +1,14 @@
 <h1>Sadness</h1>
 
-<%= form_tag(controller: 'sadness',action: 'depress', method: 'get') do %>
-    <%= label_tag(:link_to, "Sadness URL:") %>
-    <%= text_field_tag(:link_to) %>
-    <%= submit_tag("Go!") %>
+<div class="row">
+  <div class="col-lg-8">
+<%= form_tag({controller: 'sadness',action: 'depress'}, method: 'get') do %>
+        <div class="input-group">
+        <%= text_field_tag(:link_to, nil, class: 'form-control', placeholder: 'Sadness URL') %>
+      <span class="input-group-btn">
+    <%= submit_tag('Go!', class: 'btn btn-default') %>
+      </span>
 <% end %>
+</div>
+</div>
+</div>
